@@ -1,0 +1,110 @@
+[
+  {
+    "step": 4,
+    "vehicle_id": 1,
+    "target_id": 10,
+    "severity": 9
+  },
+  {
+    "step": 10,
+    "vehicle_id": 0,
+    "target_id": 1,
+    "severity": 7
+  },
+  {
+    "step": 14,
+    "vehicle_id": 3,
+    "target_id": 7,
+    "severity": 10
+  },
+  {
+    "step": 14,
+    "vehicle_id": 4,
+    "target_id": 5,
+    "severity": 9
+  },
+  {
+    "step": 17,
+    "vehicle_id": 3,
+    "target_id": 9,
+    "severity": 9
+  },
+  {
+    "step": 27,
+    "vehicle_id": 3,
+    "target_id": 0,
+    "severity": 4
+  },
+  {
+    "step": 28,
+    "vehicle_id": 0,
+    "target_id": 6,
+    "severity": 4
+  },
+  {
+    "step": 29,
+    "vehicle_id": 1,
+    "target_id": 13,
+    "severity": 10
+  },
+  {
+    "step": 30,
+    "vehicle_id": 4,
+    "target_id": 12,
+    "severity": 9
+  },
+  {
+    "step": 35,
+    "vehicle_id": 2,
+    "target_id": 14,
+    "severity": 6
+  },
+  {
+    "step": 39,
+    "vehicle_id": 0,
+    "target_id": 3,
+    "severity": 3
+  },
+  {
+    "step": 43,
+    "vehicle_id": 1,
+    "target_id": 11,
+    "severity": 6
+  },
+  {
+    "step": 44,
+    "vehicle_id": 3,
+    "target_id": 4,
+    "severity": 2
+  },
+  {
+    "step": 47,
+    "vehicle_id": 4,
+    "target_id": 2,
+    "severity": 4
+  },
+  {
+    "step": 49,
+    "vehicle_id": 1,
+    "target_id": 15,
+    "severity": 6
+  },
+  {
+    "step": 49,
+    "vehicle_id": 2,
+    "target_id": 16,
+    "severity": 1
+  },
+  {
+    "step": 54,
+    "vehicle_id": 0,
+    "target_id": 17,
+    "severity": 1
+  },
+  {
+    "step": 67,
+    "vehicle_id": 0,
+    "target_id": 8,
+    "severity": 1
+  }
+]

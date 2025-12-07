@@ -1,0 +1,58 @@
+[
+  {
+    "scenario_idx": 0,
+    "scenario_type": "random",
+    "normalized_score": 0.3937874086082517,
+    "total_rescued": 18,
+    "total_steps": 68,
+    "all_rescued": true
+  },
+  {
+    "scenario_idx": 1,
+    "scenario_type": "random",
+    "normalized_score": 0.507501975751867,
+    "total_rescued": 17,
+    "total_steps": 49,
+    "all_rescued": true
+  },
+  {
+    "scenario_idx": 2,
+    "scenario_type": "clustered_targets",
+    "normalized_score": 0.37662460964361993,
+    "total_rescued": 18,
+    "total_steps": 59,
+    "all_rescued": true
+  },
+  {
+    "scenario_idx": 3,
+    "scenario_type": "split_targets",
+    "normalized_score": 0.3943187365328232,
+    "total_rescued": 17,
+    "total_steps": 47,
+    "all_rescued": true
+  },
+  {
+    "scenario_idx": 4,
+    "scenario_type": "maze",
+    "normalized_score": 0.45753448828539234,
+    "total_rescued": 15,
+    "total_steps": 51,
+    "all_rescued": true
+  },
+  {
+    "scenario_idx": 5,
+    "scenario_type": "clustered_vehicles",
+    "normalized_score": 0.39965124118336237,
+    "total_rescued": 19,
+    "total_steps": 62,
+    "all_rescued": true
+  },
+  {
+    "scenario_idx": 6,
+    "scenario_type": "diagonal_wall",
+    "normalized_score": 0.437971243544703,
+    "total_rescued": 16,
+    "total_steps": 47,
+    "all_rescued": true
+  }
+]

@@ -1,0 +1,59 @@
+{
+    "combined_score": 0.4239128147928599,
+    "public": {
+        "num_scenarios": 7,
+        "num_successful": 7,
+        "avg_total_rescued": "17.14",
+        "avg_total_steps": "54.71",
+        "all_rescued_rate": "7/7"
+    },
+    "private": {
+        "avg_normalized_score": 0.4239128147928599,
+        "min_normalized_score": 0.37662460964361993,
+        "max_normalized_score": 0.507501975751867,
+        "scenario_scores": [
+            {
+                "scenario_idx": 0,
+                "normalized_score": 0.3937874086082517,
+                "total_rescued": 18,
+                "total_steps": 68
+            },
+            {
+                "scenario_idx": 1,
+                "normalized_score": 0.507501975751867,
+                "total_rescued": 17,
+                "total_steps": 49
+            },
+            {
+                "scenario_idx": 2,
+                "normalized_score": 0.37662460964361993,
+                "total_rescued": 18,
+                "total_steps": 59
+            },
+            {
+                "scenario_idx": 3,
+                "normalized_score": 0.3943187365328232,
+                "total_rescued": 17,
+                "total_steps": 47
+            },
+            {
+                "scenario_idx": 4,
+                "normalized_score": 0.45753448828539234,
+                "total_rescued": 15,
+                "total_steps": 51
+            },
+            {
+                "scenario_idx": 5,
+                "normalized_score": 0.39965124118336237,
+                "total_rescued": 19,
+                "total_steps": 62
+            },
+            {
+                "scenario_idx": 6,
+                "normalized_score": 0.437971243544703,
+                "total_rescued": 16,
+                "total_steps": 47
+            }
+        ]
+    }
+}
