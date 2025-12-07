@@ -6,7 +6,7 @@ This script configures and runs the evolution process to improve
 rescue vehicle coordination strategies.
 """
 
-from shinka.core import EvolutionRunner, EvolutionConfig
+from shinka.core import EvolutionConfig, EvolutionRunner
 from shinka.database import DatabaseConfig
 from shinka.launch import LocalJobConfig
 
@@ -117,7 +117,7 @@ evo_config = EvolutionConfig(
     llm_dynamic_selection="ucb1",
     llm_dynamic_selection_kwargs=dict(exploration_coef=1.0),
     init_program_path="initial.py",
-    results_dir="results",
+    results_dir="results_disaster_rescue",
 )
 
 
@@ -132,7 +132,7 @@ def main():
     print(f"  - Parallel jobs: {evo_config.max_parallel_jobs}")
     print(f"  - Strategy: {strategy}")
     print("=" * 60)
-    
+
     evo_runner = EvolutionRunner(
         evo_config=evo_config,
         job_config=job_config,
@@ -140,7 +140,7 @@ def main():
         verbose=True,
     )
     evo_runner.run()
-    
+
     print("\n" + "=" * 60)
     print("Evolution completed!")
     print("=" * 60)

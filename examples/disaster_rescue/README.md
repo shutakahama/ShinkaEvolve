@@ -8,11 +8,13 @@ This task simulates emergency rescue operations where multiple vehicles must eff
 
 ## Default environment
 
-- **Grid**: 30×30 cells (configurable)
+- **Grid**: 10×10 cells (configurable)
 - **Vehicles**: 5 rescue vehicles
 - **Targets**: 15 targets with severity levels (1-10)
-- **Obstacles**: 45 blocked cells
-- **Max Steps**: 150 steps per scenario
+- **Obstacles**: 10 blocked cells
+- **add_target_rate**: 0.0 (Not added)
+- **add_obstacle_rate**: 0.0 (Not added)
+- **Max Steps**: 20 steps per scenario
 
 ## Strategy Function
 
@@ -31,7 +33,7 @@ def select_target(
 
 ## Evaluation
 
-### Scenarios
+### Default Scenarios
 
 7 diverse scenarios prevent overfitting:
 
@@ -54,15 +56,10 @@ score = Σ(severity × log(max_steps - rescue_time))
 
 ### Dynamic Mode (Optional)
 
-Enable time-based spawning of targets and obstacles:
+Enable time-based increase of new targets and obstacles:
 
-```bash
-python evaluate.py --dynamic --visualize
-```
-
-- New targets/obstacles spawn following Poisson distribution
-- Spawn rates: `--target_spawn_rate 0.05` (default)
-- Adjusts scoring for fairness (counts time from spawn)
+- New targets/obstacles is added following Poisson distribution
+- Adjusts scoring for fairness (counts time from addition)
 
 ## Usage
 
@@ -74,12 +71,6 @@ python evaluate.py
 
 # With visualization (creates GIF)
 python evaluate.py --visualize
-
-# Dynamic mode
-python evaluate.py --dynamic --visualize
-
-# Custom scenario count
-python evaluate.py --num_scenarios 10
 ```
 
 ### Run Evolution
@@ -126,15 +117,6 @@ disaster_rescue/
 - **Logarithmic Scoring**: Prioritizes early high-severity rescues
 - **Dynamic Mode**: Adapts to changing environments
 
-## Tips for Evolution
-
-Effective strategies consider:
-
-1. **Coordination**: Avoid multiple vehicles targeting same location
-2. **Severity Weighting**: Prioritize high-severity targets
-3. **Distance Estimation**: Account for obstacles in path planning
-4. **Dynamic Reassignment**: Adapt as situation changes
-5. **Global Optimization**: Consider all vehicle-target pairs
 
 ## License
 
