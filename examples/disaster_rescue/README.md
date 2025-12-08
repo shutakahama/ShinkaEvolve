@@ -8,12 +8,12 @@ This task simulates emergency rescue operations where multiple vehicles must eff
 
 ## Default environment
 
-- **Grid**: 10×10 cells (configurable)
+- **Grid**: 10×10 cells
 - **Vehicles**: 5 rescue vehicles
 - **Targets**: 15 targets with severity levels (1-10)
 - **Obstacles**: 10 blocked cells
-- **add_target_rate**: 0.0 (Not added)
-- **add_obstacle_rate**: 0.0 (Not added)
+- **add_target_rate**: 0.0 (Static)
+- **add_obstacle_rate**: 0.0 (Static)
 - **Max Steps**: 20 steps per scenario
 
 ## Strategy Function
@@ -23,11 +23,11 @@ Evolve the `select_target` function to assign targets to vehicles:
 ```python
 def select_target(
     vehicle_id: int,
-    vehicle_pos: Tuple[int, int],
-    unrescued_targets: List[Dict],  # [{'id', 'pos', 'severity'}, ...]
-    other_vehicles: List[Dict],      # [{'id', 'pos', 'target_id'}, ...]
-    grid_size: Tuple[int, int],
-    obstacles: List[Tuple[int, int]],
+    vehicle_pos: tuple[int, int],
+    unrescued_targets: list[dict],  # [{'id', 'pos', 'severity'}, ...]
+    other_vehicles: list[dict],      # [{'id', 'pos', 'target_id'}, ...]
+    grid_size: tuple[int, int],
+    obstacles: list[tuple[int, int]],
 ) -> Optional[int]:  # Returns target_id or None
 ```
 
@@ -47,7 +47,7 @@ def select_target(
 ### Scoring
 
 ```
-score = Σ(severity × log(max_steps - rescue_time))
+score = - Σ(severity × log(time_penalty))
 ```
 
 - Logarithmic penalty emphasizes early rescues
@@ -86,7 +86,6 @@ Results saved to `results_disaster_rescue/`.
 - `metrics.json`: Combined scores and statistics
 - `scenarios_detail.json`: Per-scenario results
 - `simulation_*.gif`: Animated visualization (if `--visualize`)
-- `rescue_log_scenario0.json`: Detailed rescue log
 
 ## Visualization
 

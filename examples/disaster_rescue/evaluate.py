@@ -593,9 +593,6 @@ class RescueSimulator:
         total_targets = len(self.targets)
         all_rescued = total_rescued == total_targets
 
-        # Calculate weighted score based on severity and rescue time
-        # Higher severity targets rescued earlier get higher scores
-        # Use logarithmic time penalty to make early rescues more valuable
         weighted_score = 0
         max_possible_score = 0
 
@@ -766,17 +763,6 @@ def aggregate_rescue_metrics(
         print(f"Error saving scenario details: {e}")
         metrics["scenarios_save_error"] = str(e)
 
-    # Save rescue log from first scenario only
-    if successful_results and "rescue_log" in successful_results[0]:
-        log_file = os.path.join(results_dir, "rescue_log_scenario0.json")
-        try:
-            with open(log_file, "w") as f:
-                json.dump(successful_results[0]["rescue_log"], f, indent=2)
-            print(f"Rescue log (scenario 0) saved to {log_file}")
-        except Exception as e:
-            print(f"Error saving rescue log: {e}")
-            metrics["log_save_error"] = str(e)
-
     return metrics
 
 
@@ -858,12 +844,6 @@ def main(
 
     # Save results
     save_json_results(results_dir, metrics, correct, error_msg)
-
-    print("\n" + "=" * 60)
-    if correct:
-        print("✓ Evaluation and validation completed successfully.")
-    else:
-        print(f"✗ Evaluation or validation failed: {error_msg}")
 
     print("\nMetrics:")
     for key, value in metrics.items():

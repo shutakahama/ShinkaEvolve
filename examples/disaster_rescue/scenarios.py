@@ -643,18 +643,7 @@ SCENARIO_GENERATORS = {
 
 
 def get_scenario_generator(scenario_type: str):
-    """
-    Get the scenario generator function for a given scenario type.
-
-    Args:
-        scenario_type: Type of scenario to generate
-
-    Returns:
-        Scenario generator function
-
-    Raises:
-        ValueError: If scenario_type is not recognized
-    """
+    """Get the scenario generator function for a given scenario type."""
     if scenario_type not in SCENARIO_GENERATORS:
         raise ValueError(
             f"Unknown scenario type: {scenario_type}. "

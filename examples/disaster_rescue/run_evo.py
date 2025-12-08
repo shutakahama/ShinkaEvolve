@@ -61,7 +61,7 @@ search_task_sys_msg = """You are an expert in disaster response optimization and
 Task: Develop an effective strategy for coordinating multiple rescue vehicles to save disaster victims as quickly as possible, prioritizing high-severity cases.
 
 Scenario:
-- 30x30 grid with obstacles
+- 10x10 grid with obstacles
 - 15 targets with severity levels (1-10, higher = more urgent)
 - 5 rescue vehicles
 - targets and obstacles may appear dynamically over time
